@@ -6,7 +6,12 @@
 # Contains the source code for ploting the results of PSO algorithm
 # The 'plot_pso' function can be imported to 'main.py'
 
-
+# Importing the necessary libraries
+import numpy as np
+import matplotlib.pyplot as plt
+from joblib import load
+from tkinter.filedialog import askopenfilename
+ 
 # Defining the ploting function
 def plot_pso(dimension_limit=(15,15), speed=3, skip=None,show_all_positions=False, show_origin=False, function_name=None):
     '''Function to plot the results of the particle swarm optmization algorithm
@@ -16,12 +21,6 @@ def plot_pso(dimension_limit=(15,15), speed=3, skip=None,show_all_positions=Fals
     -->show_all_positions = if True; will display the position of all particles in every iteration without clearing them
     -->show_origin = if True; will display x and y axis originating from the origin
     -->function_name = provide the name of the function being optimized'''
-    
-    # Importing the necessary libraries
-    import numpy as np
-    import matplotlib.pyplot as plt
-    from joblib import load
-    from tkinter.filedialog import askopenfilename
 
     # Prompt the user to specify the local files generated during the PSO run to obtain particle positions
     # Collection of the positions of all particles in the swarm per iteration
